@@ -10,13 +10,13 @@ function countdown() {
   fi
 
   while (( timer > 0 )); do
-    read -n1 -t 1 -p "Countdown $timer seconds (press <Space> to pause, 'c' to cancel)" userInput
+    IFS= read -n1 -t 1 -p "Countdown $timer seconds (press <Space> to pause, 'c' to cancel)" userInput
     echo ""
 
     if [[ $userInput == " " ]]; then
       userInput=not_space
       while [[ $userInput != " " ]]; do
-        read -n1 -p "Paused, $timer seconds left (press <Space> to resume, 'c' to cancel)" userInput
+        IFS= read -n1 -p "Paused, $timer seconds left (press <Space> to resume, 'c' to cancel)" userInput
         echo ""
       done
     elif [[ $userInput == "c" ]]; then
