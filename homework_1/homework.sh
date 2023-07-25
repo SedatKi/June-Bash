@@ -13,7 +13,7 @@ read -p "Hello user, you are about to download many packages. Is this okay? (Y/N
             sudo dnf install net-tools -y; sudo dnf install htop -y; 
             sudo dnf install wget -y; sudo dnf install git -y;
             sudo dnf intall python3 -y; sudo dnf install ansible -y
-
+            
         else
         echo "Confirmation failed. Exiting now."
         exit 1
