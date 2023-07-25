@@ -11,15 +11,9 @@ read -p "Hello user, you are about to download many packages. Is this okay? (Y/N
 
             sudo dnf update rpm -y; sudo dnf update -y; sudo dnf install epel-release -y
             sudo dnf install net-tools -y; sudo dnf install htop -y; 
-<<<<<<< HEAD
             sudo dnf install wget -y; sudo dnf install git -y;
             sudo dnf intall python3 -y; sudo dnf install ansible -y
             
-=======
-            sudo dnf install wget -y; sudo dnf install git -y; 
-            sudo dnf intall python3 -y; sudo dnf install ansible -y;
-
->>>>>>> e21cd63 (Updated packages)
         else
         echo "Confirmation failed. Exiting now."
         exit 1
@@ -29,4 +23,3 @@ read -p "Hello user, you are about to download many packages. Is this okay? (Y/N
     echo "Confirmation failed. Exiting."
     exit 1 
 fi
-
